@@ -1,18 +1,12 @@
 import React from "react";
 import { Menulist } from "../data/Menulist";
 import MenuItem from "../Component/MenuItem";
+import "../App.css";
 
 function Menu() {
   return (
-    <div style={{ paddingTop: "100px" }}>
-      <div 
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "20px",
-          padding: "20px",
-        }}
-      >
+    <div className="menuPage">
+      <div className="menuContainer">
         {Menulist.map((item) => (
           <MenuItem
             key={item.id}
@@ -28,4 +22,6 @@ function Menu() {
 }
 
 export default Menu;
+
   
+
