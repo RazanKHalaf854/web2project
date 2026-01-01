@@ -1,46 +1,18 @@
 import React, { useContext } from "react";
 import { CartContext } from "../pages/CartContext";
-import "../pages/Cart.css";
+import "../App.css";
 
 function MenuItem({ name, price, image, item }) {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div 
-        style={{
-        width: "220px",
-        border: "1px solid #ddd",
-        borderRadius: "10px",
-        padding: "10px",
-       
-        textAlign: "center",
-      }}
-       >
+    <div className="menuItem">
+      <img src={image} alt={name} className="menuImage" />
 
-     
- <img 
+      <h3 className="menuTitle">{name}</h3>
+      <p className="menuPrice">{price}</p>
 
-        src={image}
-        alt={name}
-          style={{
-          width: "100%",
-          height: "180px",
-          objectFit: "cover",
-          borderRadius: "10px"
-        }}
-          
-        ></img>
-     
-     
-     
-
-      <h3 className=".menuItem h1 ">{name}</h3>
-      <p className=".menuItem p">{price}</p>
-
-      <button
-        onClick={() => addToCart(item)}
-      className="btn"
-      >
+      <button onClick={() => addToCart(item)} className="btn">
         Add to Cart
       </button>
     </div>
@@ -48,3 +20,4 @@ function MenuItem({ name, price, image, item }) {
 }
 
 export default MenuItem;
+
