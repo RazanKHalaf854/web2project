@@ -100,7 +100,7 @@ header :hover::after {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  padding: 100px 20px 60px;
+  padding: 8px;
   
 }
 
@@ -315,36 +315,36 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 10px;
 }
 /* Container */
-.contact {
+.addContainer {
   padding: 60px 20px;
   text-align: center;
-  background-color: #fff1ec;
+  background-color: #fff8f0;
   font-family: Arial, sans-serif;
 }
 
 /* Title */
-.contact h2 {
+.addTitle {
   color: #ff6347;
   font-size: 2em;
   margin-bottom: 30px;
 }
 
 /* Form */
-.contact form {
+.addForm {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   background-color: #fff;
-  padding: 30px 20px;
+  padding: 35px 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
   margin: 0 auto;
 }
 
-/* Inputs */
-.contact input ,.contact textarea {
+/* Inputs & File */
+.addInput {
   width: 100%;
   padding: 12px 15px;
   border-radius: 8px;
@@ -353,14 +353,14 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   transition: all 0.3s ease;
 }
 
-.contact input:focus , .contact textarea:focus {
+.addInput:focus {
   border-color: #ff6347;
   box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
   outline: none;
 }
 
 /* Button */
-.contact button {
+.addButton {
   background: linear-gradient(90deg, #ff6347, #ff8561);
   color: white;
   padding: 12px 25px;
@@ -372,45 +372,11 @@ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   transition: all 0.3s ease;
 }
 
-.contact button:hover {
+.addButton:hover {
   transform: translateY(-3px);
   background: linear-gradient(90deg, #ff8561, #ff6347);
 }
 
-/* Result Box */
-.result {
-  width: 90%;
-  max-width: 400px;
-  margin: 25px auto 0 auto;
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #ff8561;
-  background-color: #fffaf5;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
-  text-align: left;
-}
-
-.result h3 {
-  color: #ff6347;
-  margin-bottom: 12px;
-}
-
-.result p {
-  margin: 6px 0;
-  font-size: 1em;
-  color: #333;
-}
-
-
-footer {
-  background: #2e2e2e;
-  color: #fff;
-  text-align: center;
-  padding: 18px;
-  font-size: 0.8em;
-   font-weight: bold;
-  letter-spacing: 0.3px;
-}
 
 /* Daily Specials Section */
 .daily-specials {
@@ -488,44 +454,595 @@ footer {
 .daily-specials .card-content a:hover {
   background-color: #e67e22;
 }
+/* الكارد العام لكل عنصر */
+.menuItem {
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
+.menuItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* الصورة داخل الكارد */
+.menuItem img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* اسم المنتج */
+.menuItem h3 {
+  font-size: 18px;
+  margin: 10px 0 5px 0;
+  color: #333;
+}
+
+/* السعر */
+.menuItem p {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* زر Add to Cart */
+.menuItem .btn {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.menuItem .btn:hover {
+  background-color: #ff4b4b;
+  transform: scale(1.05);
+}
+/*contact 
+/* Container */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff1ec;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.contact h2 {
+  color: #ff6347;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Inputs */
+.contact input ,.contact textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.contact input:focus , .contact textarea:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+  outline: none;
+}
+
+/* Button */
+.contact button {
+  background: linear-gradient(90deg, #ff6347, #ff8561);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #ff8561, #ff6347);
+}
+/* Result Box */
+.result {
+  width: 90%;
+  max-width: 400px;
+  margin: 25px auto 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ff8561;
+  background-color: #fffaf5;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.result h3 {
+  color: #ff6347;
+  margin-bottom: 12px;
+}
+
+.result p {
+  margin: 6px 0;
+  font-size: 1em;
+  color: #333;
+}
+
+
+footer {
+  background: #2e2e2e;
+  color: #fff;
+  text-align: center;
+  padding: 18px;
+  font-size: 0.8em;
+   font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+/* تصميم الـ container للـ menu */
+.menuContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 20px;
+  justify-content: center;
+  margin-top: 50px;
+
+}
+
+/* Container */
+.contactContainer {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff1ec;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.contactTitle {
+  color: #ff6347;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Inputs */
+.contactInput, 
+.contactTextarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.contactInput:focus, 
+.contactTextarea:focus {
+  border-color: #ff6347;
+  box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+  outline: none;
+}
+
+/* Button */
+.contactButton {
+  background: linear-gradient(90deg, #ff6347, #ff8561);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contactButton:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(90deg, #ff8561, #ff6347);
+}
+
+
+.authContainer {
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authContainer h2 {
+ color: #ff6347;
+}
+.authBox {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.authInput {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.authButton {
+  background: #ff6347;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.switchAuth {
+  margin-top: 15px;
+  color: #ff6347;
+  cursor: pointer;
+}
+
+
+/* ===================== RESPONSIVE (Mobile First) ===================== */
 @media (max-width: 600px) {
-  .testimonial-track {
+
+  /* ===== HEADER ===== */
+  header {
+    padding: 6px 10px;
+  }
+
+  header h1 {
+    font-size: 1em;
+  }
+
+  header a {
+    font-size: 0.75em;
+    margin: 0 4px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 100px 12px 50px;
+  }
+
+  .hero h2 {
+    font-size: 1.3em;
+  }
+
+  .hero p {
+    font-size: 0.85em;
+  }
+
+  .btn {
+    font-size: 0.75em;
+    padding: 8px 14px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-container {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.3em;
+  }
+
+  .about-text p {
+    font-size: 13px;
+  }
+
+  /* ===== MENU ===== */
+  .menuContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .menuItem {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .menuItem img {
+    height: 110px;
+  }
+
+  .menuItem h3 {
+    font-size: 13px;
+  }
+
+  .menuItem p {
+    font-size: 12px;
+  }
+#feedback h2{
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.daily-specials h2{
+  font-size: 1.0em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+  .menuItem .btn {
+    font-size: 0.7em;
+    padding: 6px 10px;
+  }
+
+  /* ===== CART ===== */
+  /* ===== CART ===== */
+.cart-container {
+  padding: 15px;
+  padding-top: 100px;
+  max-width: 400px; /* قللنا العرض */
+  margin: 0 auto; /* نحطو بالوسط */
+}
+
+.cart-item {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  width: 100%; /* تأكد العرض يوافق ال container */
+}
+
+.cart-item-image {
+  width: 80px; /* صغر الصورة شوي */
+  border-radius: 8px;
+}
+
+.cart-item-right {
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+}
+
+.cart-item-details h3 {
+  font-size: 14px;
+}
+
+.cart-item-details p {
+  font-size: 12px;
+}
+
+.counter-buttons button {
+  padding: 2px 8px;
+  font-size: 0.8em;
+}
+
+.counter-buttons span {
+  min-width: 18px;
+  font-size: 0.9em;
+}
+
+.btn1 {
+  padding: 10px 20px;
+  font-size: 0.85em;
+  border-radius: 25px;
+  width: 100%; /* يوّسع الزر للعرض كامل */
+  max-width: 250px; /* لكنه لا يكون كبير جدًا */
+  margin-left: auto;
+  margin-right: auto; /* الزر بالوسط */
+}
+  /* ===== AUTH ===== */
+  .authBox {
+    width: 95%;
+    padding: 25px;
+  }
+
+  .authBox h2 {
+    font-size: 1.6em;
+  }
+
+  .authInput, .authButton {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .switchAuth {
+    font-size: 0.85em;
+  }
+
+  /* ===== CONTACT / ADD FORM ===== */
+  .contactForm, .addForm {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .contactInput, .contactTextarea, .addInput {
+    font-size: 0.85em;
+    padding: 10px;
+  }
+
+  .contactButton, .addButton {
+    font-size: 0.85em;
+    padding: 10px 20px;
+  }
+
+  /* ===== DAILY SPECIALS ===== */
+  .daily-specials .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .daily-specials .card {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .daily-specials .card img {
+    height: 110px;
+  }
+
+  .daily-specials .card-content h3 {
+    font-size: 13px;
+  }
+
+  .daily-specials .card-content p {
+    font-size: 12px;
+  }
+
+  /* ===== TESTIMONIALS ===== */
+  .testimonial-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
     animation: none;
+    padding: 0 12px;
   }
 
   .testimonial-card {
     width: 100%;
-  
-  }
-   .hero h2 {
-    font-size: 2.2em;
+    padding: 12px;
+    border-radius: 8px;
   }
 
-  .hero p {
-    font-size: 1.1em;
+  .testimonial-card img {
+    width: 55px;
+    height: 55px;
   }
 
-  .about-container {
-    flex-direction: column;
-  }
-  .contact form {
-    width: 90%;
-    padding: 25px 15px;
+  .testimonial-card p {
+    font-size: 11.5px;
+    line-height: 1.4;
   }
 
-  .contact input {
-    font-size: 0.95em;
+  .testimonial-card h4 {
+    font-size: 13px;
   }
 
-  .contact button {
-    font-size: 0.95em;
-    padding: 10px 20px;
+  .testimonial-card span {
+    font-size: 11px;
   }
-    .daily-specials .cards {
-    flex-direction: column;
-    align-items: center;
+
+  .dots {
+    margin-top: 15px;
+  }
+
+  .dot {
+    width: 9px;
+    height: 9px;
+  }
+  .authBox {
+    width: 70%;
+    padding: 20px;
+  }
+.addContainer{
+  width: 85%;
+  padding: 20px;
+}
+.addTitle{
+  font-size: 1.2em;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+  .authBox h2 {
+    font-size: 1.5em;
+  }
+
+  .authInput {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .authButton {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .switchAuth {
+    font-size: 0.8em;
+  }
+  /* Container */
+  .contact {
+    padding: 40px 15px;
+  }
+
+  .contact h2 {
+     font-size: 1.2em;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  }
+
+  /* Form */
+  .contactForm {
+    width: 85%;
+    padding: 15px;
+    
+  }
+
+  .contactInput,
+  .contactTextarea ,
+  .contactButton{
+    font-size: 0.85em; /* صغر النصوص داخل الحقول */
+    padding: 8px;
+  }
+
+  .contactButton {
+    font-size: 0.85em;
+    padding: 8px 18px;
+    border-radius: 20px;
   }
 }
